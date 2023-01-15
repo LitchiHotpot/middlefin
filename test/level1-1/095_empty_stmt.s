@@ -14,12 +14,13 @@ main:
 	ldr r4, [fp, #-4]
 	ldr r5, =0
 	cmp r4, r5
-	movgt r4, #1
-	movle r4, #0
-	lsl r4, #1
-	ldr r5, =1
-	add r6, r4, r5
-	mov r0, r6
+	movgt r5, #1
+	movle r5, #0
+	ldr r5, =2
+	mul r6, r4, r5
+	ldr r4, =1
+	add r5, r6, r4
+	mov r0, r5
 	add sp, sp, #4
 	pop {r4, r5, r6, fp, lr}
 	bx lr

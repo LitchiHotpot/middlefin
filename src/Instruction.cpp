@@ -737,33 +737,33 @@ void BinaryInstruction::genMachineCode(AsmBuilder* builder)
         return;
     }
 
-    if((src1->isImm() || src2->isImm()) && opcode == MUL){
-        //乘法优化
-        int val_IMM;
-        if(src1->isImm()) val_IMM = src1->getVal();
-        else val_IMM = src2->getVal();
-        //std::cout<<val_IMM<<std::endl;
-        if(val_IMM == 0){
-            //std::cout<<n_IMM<<std::endl;
-            auto result_IMM = genMachineImm(0);
-            cur_inst = new MovMInstruction(cur_block,MovMInstruction::MOV,dst,result_IMM);
-            cur_block->InsertInst(cur_inst);
-            return;
-        }
-        else if(val_IMM % 2 == 0){
-            int n_IMM=0;
-            while(val_IMM!=1){
-                val_IMM /= 2;
-                n_IMM++;
-            }
-            //std::cout<<n_IMM<<std::endl;
-            auto result_IMM = genMachineImm(n_IMM);
-            cur_inst = new SalMInstruction(cur_block,dst,result_IMM);
-            cur_block->InsertInst(cur_inst);
-            return;
-        }
+    // if((src1->isImm() || src2->isImm()) && opcode == MUL){
+    //     //乘法优化
+    //     int val_IMM;
+    //     if(src1->isImm()) val_IMM = src1->getVal();
+    //     else val_IMM = src2->getVal();
+    //     //std::cout<<val_IMM<<std::endl;
+    //     if(val_IMM == 0){
+    //         //std::cout<<n_IMM<<std::endl;
+    //         auto result_IMM = genMachineImm(0);
+    //         cur_inst = new MovMInstruction(cur_block,MovMInstruction::MOV,dst,result_IMM);
+    //         cur_block->InsertInst(cur_inst);
+    //         return;
+    //     }
+    //     else if(val_IMM % 2 == 0){
+    //         int n_IMM=0;
+    //         while(val_IMM!=1){
+    //             val_IMM /= 2;
+    //             n_IMM++;
+    //         }
+    //         //std::cout<<n_IMM<<std::endl;
+    //         auto result_IMM = genMachineImm(n_IMM);
+    //         cur_inst = new SalMInstruction(cur_block,dst,result_IMM);
+    //         cur_block->InsertInst(cur_inst);
+    //         return;
+    //     }
 
-    }
+    // }
 
     if(src1->isImm())
     {
