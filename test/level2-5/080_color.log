@@ -1,0 +1,8 @@
+test/level2-5/080_color.s: Assembler messages:
+test/level2-5/080_color.s:6: Warning: size (-343336544) out of range, ignored
+test/level2-5/080_color.s:213: Error: ARM register expected -- `push {v870}'
+test/level2-5/080_color.s:303: Error: ARM register expected -- `push {v884}'
+test/level2-5/080_color.s:393: Error: ARM register expected -- `push {v898}'
+test/level2-5/080_color.s:483: Error: ARM register expected -- `push {v912}'
+test/level2-5/080_color.s:558: Error: ARM register expected -- `push {v924}'
+test/level2-5/080_color.s:874: Error: ARM register expected -- `push {v981}'

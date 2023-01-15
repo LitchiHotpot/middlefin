@@ -1,0 +1,9 @@
+test/level2-5/104_long_array.s: Assembler messages:
+test/level2-5/104_long_array.s:49: Error: garbage following instruction -- `sdiv r4,r6,#10'
+test/level2-5/104_long_array.s:50: Error: ARM register expected -- `mul r4,r4,#10'
+test/level2-5/104_long_array.s:92: Error: garbage following instruction -- `sdiv r4,r6,#10'
+test/level2-5/104_long_array.s:93: Error: ARM register expected -- `mul r4,r4,#10'
+test/level2-5/104_long_array.s:135: Error: garbage following instruction -- `sdiv r4,r6,#100'
+test/level2-5/104_long_array.s:136: Error: ARM register expected -- `mul r4,r4,#100'
+test/level2-5/104_long_array.s:250: Error: garbage following instruction -- `sdiv r4,r5,#2'
+test/level2-5/104_long_array.s:324: Error: garbage following instruction -- `sdiv r4,r5,#2'
